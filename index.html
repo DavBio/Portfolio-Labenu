@@ -2,19 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Biolchini</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
+<div class="navBar" id="navBar"> 
     <a href="#experiencia">Experiência</a>
     <a href="#projetos">Projetos</a> 
     <a href="#habilidades">Habilidades</a>
     <a href=#contato>Contato</a>
-</header>
+</div>
 <div class="sidebar" id="sidebarDiv">
-    <img src="imgs/Perfil.jpeg">
+    <div class="blueBar"></div>
+    <img id="imgPerfil" src="imgs/Perfil.jpeg">
     <h1>DAVID BIOLCHINI</h1>
     <p id="subtitulo">Desenvolvedor Front-End</p>
     <h2 class="subtituloPreto">Sobre</h2>
@@ -26,8 +28,10 @@
     <a href="https://www.linkedin.com/in/david-biolchini/">LinkedIn</a><br>
     <a href="https://www.facebook.com/dbiolchini">Facebook</a><br>
     <a href="https://github.com/DavBio">GitHub</a>
+    <div class="blueBar" id="blueBarBottom"></div>
 </div>
 
+<div class="content">
 <div class="experiencia" id="experienciaDiv">
     <a name="experiencia"></a>
     <h2>Experiência</h2>
@@ -48,7 +52,7 @@
 <div class="habilidades" id="habilidadesDiv">
     <a name="habilidades"></a>
     <h2>Habilidades</h2>
-    <p></p>
+    <p>Resiliência, Comunicação, HTML, CSS, Javascript</p>
 </div>
 
 <div class="contato" id="contatoDiv">
@@ -59,6 +63,7 @@
         <input type="email">
         <input type="text">
     </form>
+</div>
 </div>
 
 <footer>

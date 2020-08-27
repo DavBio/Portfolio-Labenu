@@ -1,0 +1,111 @@
+* { 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 20% 1fr 1fr 1fr;
+  grid-template-rows: 10% 1fr 10%;
+  gap: 1px 1px;
+  grid-template-areas: "c c c c" "a b b b" "d d d d";
+}
+
+p, a {
+    font-family: 'Roboto', sans-serif;
+}
+
+.navBar {
+    background-color: white;
+    text-align: center;
+    margin: 16px;
+    grid-area: c;
+}
+
+.navBar > a {
+    color: black;
+    padding: 4px 48px 4px 48px;
+    font-size: large;
+}
+
+.navBar > a:hover {
+    font-size: larger;
+    padding: 4px 48px 4px 48px;
+} 
+
+#sidebarDiv {
+    
+    background-color: black;
+    color:white;
+    grid-area: a ;
+}
+
+#sidebarDiv > h1 {
+    color: #5271ff;
+    text-align: center;
+    margin: 8px auto 0px auto;
+    font-family: 'Oswald', sans-serif;
+}
+
+#sidebarDiv > h2 {
+    background-color: #5271ff;
+    color: black;
+    margin: 72px 16px 16px;
+    font-family: 'Oswald', sans-serif;
+}
+
+#sidebarDiv a {
+    color: white;
+    margin: 8px 16px;
+}
+
+#sidebarDiv p {
+    margin: 8px 16px;
+}
+
+#subtitulo {
+    text-align: center;
+    margin: 0px auto 4px auto;
+}
+
+#imgPerfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 24px auto auto auto;
+}
+
+.blueBar {
+    background-color:#5271ff ;
+    height: 72px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#blueBarBottom {
+    margin-top: 24px;
+}
+
+.content {
+    grid-area: b;
+    margin-left: 24px;
+}
+
+.content h2 {
+    background-color: #5271ff;
+    color: white;
+    width: 25%;
+    font-family: 'Oswald', sans-serif;
+}
+
+.imgProjeto {
+    width: 200px;
+    height: 200px;
+    margin-top: 16px;
+}
+
+footer {
+    grid-area: d;
+}
