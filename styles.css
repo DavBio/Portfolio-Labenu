@@ -28,7 +28,10 @@ p, a, li {
     grid-area: c;
     position: fixed;
     top: 0;
-    width: 100%
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .navBar > a {
@@ -48,7 +51,6 @@ p, a, li {
     background-color: black;
     color:white;
     grid-area: a ;
-    position: relative;
 }
 
 #sidebarDiv > h1 {
@@ -101,8 +103,6 @@ p, a, li {
 
 #blueBarBottom {
     margin-top: 24px;
-    position:absolute; 
-    bottom:0;
 }
 
 .content {
@@ -113,7 +113,6 @@ p, a, li {
 .content h2 {
     background-color: #5271ff;
     color: white;
-    width: 15%;
     font-family: 'Oswald', sans-serif;
     margin: 24px;
     padding-left: 8px ;
@@ -124,11 +123,52 @@ p, a, li {
     border-top: solid grey 1px;
 }
 
+.experiencia {
+    display: flex;
+    flex-direction: row;
+}
+
+.experiencia div {
+    margin-left: 1em;
+}
+
+.projetos {
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 3fr 3fr;
+  gap: 1px 1px;
+  grid-template-areas:
+    "h2 h2"
+    "um dois"
+    "tres quatro";
+}
+
+.projetos > h2 {
+
+    grid-area: h2;
+}
+
 .imgDiv {
     width: fit-content;
-    height: 200px;
-    margin: 40px 72px;
+    height: 50%;
+    margin: 1em 0 0 2em;
     display: inline-block;
+}
+
+#um {
+    grid-area: um;
+}
+
+#dois{
+    grid-area: dois;
+}
+
+#tres {
+    grid-area: tres;
+}
+
+#quatro {
+    grid-area: quatro;
 }
 
 .imgProjeto {
@@ -151,6 +191,10 @@ p, a, li {
 
 .imgDiv:hover .nomeProjeto {
     opacity: 1;
+}
+
+form {
+    font-family: sans-serif;
 }
 
 input {
@@ -180,6 +224,7 @@ input {
 }
 
 footer {
+    height: 15%;
     grid-area: d;
     border-top: white solid 1px;
     background-color: rgb(247, 247, 247);
@@ -187,6 +232,56 @@ footer {
     text-align: center;
 }
 
-footer p {
-    padding-top: 40px ;
-}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 667px) {
+
+
+        body {
+             display: block;
+        }
+
+        .content {
+            margin:0px;
+        }
+
+        .navBar {
+            display: none;
+        }
+
+        #sidebarDiv > h1 {
+            font-size: xxx-large;
+        }
+
+        #sidebarDiv > #subtitulo {
+            font-size: x-large;
+        }
+
+        .experiencia {
+            flex-direction: column;
+        }
+
+        .projetos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .projetos > h2 {
+            min-width: 100px;
+        }
+        
+        .nomeProjeto {
+            opacity: 1;
+            padding: 1em;
+        }
+        
+        .imgDiv {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1em 0;
+        }
+
+        footer{
+            padding: 1em 0;
+        }
+    }
